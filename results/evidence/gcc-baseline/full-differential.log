@@ -1,0 +1,120 @@
+PASS seed_index=0 seed=14966288679382284532 commands=1000000 cumulative=1000000
+PASS seed_index=1 seed=6006627078899031612 commands=1000000 cumulative=2000000
+PASS seed_index=2 seed=6923613682893522993 commands=1000000 cumulative=3000000
+PASS seed_index=3 seed=14821453552812999516 commands=1000000 cumulative=4000000
+PASS seed_index=4 seed=7076235178802127077 commands=1000000 cumulative=5000000
+PASS seed_index=5 seed=9728960992615458608 commands=1000000 cumulative=6000000
+PASS seed_index=6 seed=16802769177454193985 commands=1000000 cumulative=7000000
+PASS seed_index=7 seed=12281035624027037979 commands=1000000 cumulative=8000000
+PASS seed_index=8 seed=3049951317958930520 commands=1000000 cumulative=9000000
+PASS seed_index=9 seed=12212749638198774622 commands=1000000 cumulative=10000000
+PASS seed_index=10 seed=1454926441912082113 commands=1000000 cumulative=11000000
+PASS seed_index=11 seed=13363424211441896270 commands=1000000 cumulative=12000000
+PASS seed_index=12 seed=10822119047490498570 commands=1000000 cumulative=13000000
+PASS seed_index=13 seed=15756433447660537089 commands=1000000 cumulative=14000000
+PASS seed_index=14 seed=17790311815767561638 commands=1000000 cumulative=15000000
+PASS seed_index=15 seed=3084808560161062378 commands=1000000 cumulative=16000000
+PASS seed_index=16 seed=6326341188654916233 commands=1000000 cumulative=17000000
+PASS seed_index=17 seed=7621315781613363813 commands=1000000 cumulative=18000000
+PASS seed_index=18 seed=5704015279809586241 commands=1000000 cumulative=19000000
+PASS seed_index=19 seed=15366556085490274059 commands=1000000 cumulative=20000000
+PASS seed_index=20 seed=10040357346407635312 commands=1000000 cumulative=21000000
+PASS seed_index=21 seed=11199652547978379090 commands=1000000 cumulative=22000000
+PASS seed_index=22 seed=12842361123710769323 commands=1000000 cumulative=23000000
+PASS seed_index=23 seed=18066507150897717027 commands=1000000 cumulative=24000000
+PASS seed_index=24 seed=8299849114242618380 commands=1000000 cumulative=25000000
+PASS seed_index=25 seed=11833877772044155459 commands=1000000 cumulative=26000000
+PASS seed_index=26 seed=8636932741722572375 commands=1000000 cumulative=27000000
+PASS seed_index=27 seed=12213913179340972343 commands=1000000 cumulative=28000000
+PASS seed_index=28 seed=7924766743177174515 commands=1000000 cumulative=29000000
+PASS seed_index=29 seed=3092165718366069702 commands=1000000 cumulative=30000000
+PASS seed_index=30 seed=5571990132770307589 commands=1000000 cumulative=31000000
+PASS seed_index=31 seed=16203671617165596887 commands=1000000 cumulative=32000000
+PASS seed_index=32 seed=9704784866639111547 commands=1000000 cumulative=33000000
+PASS seed_index=33 seed=16940386062835851421 commands=1000000 cumulative=34000000
+PASS seed_index=34 seed=231564162318524428 commands=1000000 cumulative=35000000
+PASS seed_index=35 seed=12639833377976677182 commands=1000000 cumulative=36000000
+PASS seed_index=36 seed=17742303205119482315 commands=1000000 cumulative=37000000
+PASS seed_index=37 seed=5324215445171454347 commands=1000000 cumulative=38000000
+PASS seed_index=38 seed=18215637534135501716 commands=1000000 cumulative=39000000
+PASS seed_index=39 seed=13846619113010219365 commands=1000000 cumulative=40000000
+PASS seed_index=40 seed=16357360182424461921 commands=1000000 cumulative=41000000
+PASS seed_index=41 seed=15306460367753882827 commands=1000000 cumulative=42000000
+PASS seed_index=42 seed=5514975731334663625 commands=1000000 cumulative=43000000
+PASS seed_index=43 seed=11690501976718585572 commands=1000000 cumulative=44000000
+PASS seed_index=44 seed=15310985997535919569 commands=1000000 cumulative=45000000
+PASS seed_index=45 seed=2084584803805796412 commands=1000000 cumulative=46000000
+PASS seed_index=46 seed=14107406045063776500 commands=1000000 cumulative=47000000
+PASS seed_index=47 seed=402779780449546269 commands=1000000 cumulative=48000000
+PASS seed_index=48 seed=992007155475614271 commands=1000000 cumulative=49000000
+PASS seed_index=49 seed=3061650436386862958 commands=1000000 cumulative=50000000
+PASS seed_index=50 seed=7413290381519788316 commands=1000000 cumulative=51000000
+PASS seed_index=51 seed=9198137602549314273 commands=1000000 cumulative=52000000
+PASS seed_index=52 seed=3539213078088495460 commands=1000000 cumulative=53000000
+PASS seed_index=53 seed=7979172543962908621 commands=1000000 cumulative=54000000
+PASS seed_index=54 seed=16962317679107229315 commands=1000000 cumulative=55000000
+PASS seed_index=55 seed=17201026125536287830 commands=1000000 cumulative=56000000
+PASS seed_index=56 seed=1899893062235338094 commands=1000000 cumulative=57000000
+PASS seed_index=57 seed=17568147839015911761 commands=1000000 cumulative=58000000
+PASS seed_index=58 seed=2542573605612451298 commands=1000000 cumulative=59000000
+PASS seed_index=59 seed=4168045035516034926 commands=1000000 cumulative=60000000
+PASS seed_index=60 seed=3426044627235929586 commands=1000000 cumulative=61000000
+PASS seed_index=61 seed=6906193452303465037 commands=1000000 cumulative=62000000
+PASS seed_index=62 seed=3613484609370321865 commands=1000000 cumulative=63000000
+PASS seed_index=63 seed=11490849812135095033 commands=1000000 cumulative=64000000
+PASS seed_index=64 seed=4735147923125712820 commands=1000000 cumulative=65000000
+PASS seed_index=65 seed=5969599969661280136 commands=1000000 cumulative=66000000
+PASS seed_index=66 seed=16966717307244288036 commands=1000000 cumulative=67000000
+PASS seed_index=67 seed=8050147786273829478 commands=1000000 cumulative=68000000
+PASS seed_index=68 seed=3332808243463153362 commands=1000000 cumulative=69000000
+PASS seed_index=69 seed=12576047905883664695 commands=1000000 cumulative=70000000
+PASS seed_index=70 seed=3950428801583781893 commands=1000000 cumulative=71000000
+PASS seed_index=71 seed=10105846440389967215 commands=1000000 cumulative=72000000
+PASS seed_index=72 seed=2506931593059811025 commands=1000000 cumulative=73000000
+PASS seed_index=73 seed=16109761654381564536 commands=1000000 cumulative=74000000
+PASS seed_index=74 seed=17270863132347058298 commands=1000000 cumulative=75000000
+PASS seed_index=75 seed=2687582230081975189 commands=1000000 cumulative=76000000
+PASS seed_index=76 seed=4535100530710030939 commands=1000000 cumulative=77000000
+PASS seed_index=77 seed=531661902329302790 commands=1000000 cumulative=78000000
+PASS seed_index=78 seed=5692251780091374487 commands=1000000 cumulative=79000000
+PASS seed_index=79 seed=8248093578033013646 commands=1000000 cumulative=80000000
+PASS seed_index=80 seed=15560749485808997236 commands=1000000 cumulative=81000000
+PASS seed_index=81 seed=14486444985111477014 commands=1000000 cumulative=82000000
+PASS seed_index=82 seed=6400274008681601708 commands=1000000 cumulative=83000000
+PASS seed_index=83 seed=1324525151215568781 commands=1000000 cumulative=84000000
+PASS seed_index=84 seed=7678516850482826925 commands=1000000 cumulative=85000000
+PASS seed_index=85 seed=12576567287874508997 commands=1000000 cumulative=86000000
+PASS seed_index=86 seed=12725457943237597495 commands=1000000 cumulative=87000000
+PASS seed_index=87 seed=10792562099417637826 commands=1000000 cumulative=88000000
+PASS seed_index=88 seed=16789678952641482762 commands=1000000 cumulative=89000000
+PASS seed_index=89 seed=18403874721264677230 commands=1000000 cumulative=90000000
+PASS seed_index=90 seed=18433848126941719882 commands=1000000 cumulative=91000000
+PASS seed_index=91 seed=17716553420169993273 commands=1000000 cumulative=92000000
+PASS seed_index=92 seed=1202117933801776366 commands=1000000 cumulative=93000000
+PASS seed_index=93 seed=1112270070995169812 commands=1000000 cumulative=94000000
+PASS seed_index=94 seed=12777739648247312644 commands=1000000 cumulative=95000000
+PASS seed_index=95 seed=700636967720460124 commands=1000000 cumulative=96000000
+PASS seed_index=96 seed=7488912712563909395 commands=1000000 cumulative=97000000
+PASS seed_index=97 seed=3349920249940467785 commands=1000000 cumulative=98000000
+PASS seed_index=98 seed=12709585997676638280 commands=1000000 cumulative=99000000
+PASS seed_index=99 seed=18304329835690035368 commands=1000000 cumulative=100000000
+{
+  "status": "pass",
+  "generator": "splitmix64-bounded-adversarial-v1",
+  "base_seed": 8330235730275514375,
+  "first_seed": 0,
+  "seeds": 100,
+  "commands_per_seed": 1000000,
+  "commands_compared": 100000000,
+  "reports_compared": 209631029,
+  "trades_compared": 34195803,
+  "applied_commands": 47364043,
+  "rejected_commands": 52635957,
+  "structural_checkpoints": 24500,
+  "checkpoint_interval": 4096,
+  "linear_variant_compared": true,
+  "linear_fok_variant_compared": true,
+  "per_command_checks": ["process_result", "all_event_fields", "statistics", "size", "resting_quantity", "best_quotes", "quantity_conservation", "uncrossed_quotes"],
+  "checkpoint_checks": ["full_structural_invariants", "full_FIFO_orders", "all_levels", "all_statistics"],
+  "elapsed_seconds": 20.543203
+}

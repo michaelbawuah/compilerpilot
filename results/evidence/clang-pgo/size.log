@@ -1,0 +1,38 @@
+/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9/ledger_bench  :
+section                size     addr
+.interp                  28      680
+.note.ABI-tag            32      708
+.note.gnu.build-id       24      740
+.dynsym                2544      768
+.gnu.version            212     3312
+.gnu.version_r          352     3524
+.gnu.hash               128     3880
+.dynstr                4443     4008
+.rela.dyn               624     8456
+.rela.plt              1656     9080
+.rodata                4416    10752
+.gcc_except_table      2452    15168
+.eh_frame_hdr          1380    17620
+.eh_frame              9936    19000
+.text                 62888    33040
+.init                    27    95928
+.fini                    13    95956
+.plt                   1120    95984
+.fini_array               8   101200
+.init_array               8   101208
+.dynamic                464   101216
+.got                    144   101680
+.relro_padding          576   101824
+.data                    56   105920
+.tm_clone_table           0   105976
+.got.plt                576   105976
+.bss                      1   106552
+.comment                109        0
+.debug_abbrev           813        0
+.debug_info           86798        0
+.debug_ranges         53296        0
+.debug_str            28758        0
+.debug_line           53504        0
+Total                317386
+
+

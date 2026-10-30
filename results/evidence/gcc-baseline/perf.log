@@ -1,0 +1,9 @@
+reference run 1/1: 6.53 M commands/s, p99 550 ns
+fast-bitmap run 1/1: 12.63 M commands/s, p99 320 ns
+fast-linear run 1/1: 13.53 M commands/s, p99 390 ns
+/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559/counters/summary.json
+<not supported>;;cycles:u;0;100.00;;
+<not supported>;;instructions:u;0;100.00;;
+<not supported>;;branches:u;0;100.00;;
+<not supported>;;branch-misses:u;0;100.00;;
+<not supported>;;L1-icache-load-misses:u;0;100.00;;

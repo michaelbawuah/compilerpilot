@@ -1,0 +1,4 @@
+# Preserve raw compiler and CTest evidence byte for byte.
+results/evidence/** -whitespace
+*.parquet binary
+*.png binary

@@ -1,0 +1,9 @@
+{
+  "samples": 0,
+  "folds": 0,
+  "mae_speedup_pct": null,
+  "spearman": null,
+  "predictions": [],
+  "method": "deduplicated out-of-fold",
+  "reason": "at least three distinct correct measured candidates required"
+}

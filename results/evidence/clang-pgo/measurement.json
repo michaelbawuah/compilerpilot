@@ -1,0 +1,108 @@
+{
+  "correctness": true,
+  "throughput": 15411524.6179,
+  "p50_ns": 50.0,
+  "p99_ns": 220.0,
+  "cv": 0.13895346530749275,
+  "spread": 2294788.170372,
+  "runs": [
+    17532161.3913,
+    15411524.6179,
+    20084063.4543,
+    14721145.3663,
+    14825086.5133
+  ],
+  "error": null,
+  "provenance": {
+    "input_sha256": "287e9fc40655dc798a55b518f510c6f5528bfad862853869227c80036fa5e05e",
+    "input": "/workspace/scratch/782b5db88681/compilerpilot/data/eval.lob",
+    "cpu": 0,
+    "pinned": true,
+    "flags": [
+      "-O3",
+      "-DNDEBUG",
+      "-march=native",
+      "-flto=thin",
+      "-fuse-ld=lld",
+      "-fprofile-instr-use=/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9/profile/merged.profdata",
+      "-fsave-optimization-record"
+    ],
+    "summary": "/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9/qualification/summary.json",
+    "runs_csv": "/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9/qualification/runs.csv",
+    "benchmark_command": [
+      "taskset",
+      "-c",
+      "0",
+      "/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9/ledger_bench",
+      "--input",
+      "/workspace/scratch/782b5db88681/compilerpilot/data/eval.lob",
+      "--runs",
+      "5",
+      "--warmup",
+      "50000",
+      "--outdir",
+      "/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9/qualification"
+    ],
+    "differential_command": [
+      "taskset",
+      "-c",
+      "0",
+      "/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9/ledger_differential",
+      "--seeds",
+      "5",
+      "--orders",
+      "100000",
+      "--output",
+      "/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9/qualification/differential.json"
+    ],
+    "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+    "compiler": {
+      "version": "Ubuntu Clang 18.1.3 (1ubuntu1)",
+      "flags": "-O3 -DNDEBUG -march=native -flto=thin -fuse-ld=lld -fprofile-instr-use=/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9/profile/merged.profdata -fsave-optimization-record -DNDEBUG   standard=C++23",
+      "optimization_enabled": true,
+      "ndebug": true
+    },
+    "differential": {
+      "status": "pass",
+      "generator": "splitmix64-bounded-adversarial-v1",
+      "base_seed": 8330235730275514375,
+      "first_seed": 0,
+      "seeds": 5,
+      "commands_per_seed": 100000,
+      "commands_compared": 500000,
+      "reports_compared": 1047284,
+      "trades_compared": 171010,
+      "applied_commands": 237011,
+      "rejected_commands": 262989,
+      "structural_checkpoints": 125,
+      "checkpoint_interval": 4096,
+      "linear_variant_compared": true,
+      "linear_fok_variant_compared": true,
+      "per_command_checks": [
+        "process_result",
+        "all_event_fields",
+        "statistics",
+        "size",
+        "resting_quantity",
+        "best_quotes",
+        "quantity_conservation",
+        "uncrossed_quotes"
+      ],
+      "checkpoint_checks": [
+        "full_structural_invariants",
+        "full_FIFO_orders",
+        "all_levels",
+        "all_statistics"
+      ],
+      "elapsed_seconds": 0.111435
+    }
+  },
+  "checksums": {
+    "event_checksum": 741329192224569279,
+    "trade_checksum": 7031300757833197514,
+    "events": 2191466,
+    "trades": 397155,
+    "rejected_commands": 0,
+    "live_orders_final": 2045
+  }
+}

@@ -1,0 +1,34 @@
+/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/ledger_bench  :
+section                size     addr
+.interp                  28      792
+.note.gnu.property       48      824
+.note.gnu.build-id       36      872
+.note.ABI-tag            32      908
+.gnu.hash               188      944
+.dynsym                2472     1136
+.dynstr                4217     3608
+.gnu.version            206     7826
+.gnu.version_r          416     8032
+.rela.dyn               528     8448
+.rela.plt              1632     8976
+.init                    27    12288
+.plt                   1104    12320
+.plt.got                 16    13424
+.plt.sec               1088    13440
+.text                 71025    14528
+.fini                    13    85556
+.rodata                4256    86016
+.eh_frame_hdr          1524    90272
+.eh_frame              8180    91800
+.gcc_except_table      1989    99980
+.init_array               8   105136
+.fini_array               8   105144
+.data.rel.ro            144   105152
+.dynamic                544   105296
+.got                    648   105840
+.data                    32   106496
+.bss                    568   106560
+.comment                 43        0
+Total                101020
+
+

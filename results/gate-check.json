@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "timestamp": "2026-10-30T13:10:06.133799+00:00",
+  "qualified": true,
+  "original_source": {
+    "ledger_commit": "c0dbffd6a036feb27e225362a92df9792d8e844a",
+    "ledger_dirty": false,
+    "source_sha256": "d46a4c63609ef2b9955d90d1260133a4f1a48815eb836229d6dc07bfb25df45e"
+  },
+  "mutation": {
+    "file": "src/book.cpp",
+    "before": "    return command.action == Action::Market || (command.side == Side::Buy ? command.price >= maker_price : command.price <= maker_price);",
+    "after": "    return command.action == Action::Market || (command.side == Side::Buy ? command.price > maker_price : command.price <= maker_price);",
+    "reason": "A buy limit equal to the resting ask incorrectly fails to cross"
+  },
+  "build_success": true,
+  "correctness": false,
+  "throughput": null,
+  "p50_ns": null,
+  "p99_ns": null,
+  "mutated_source": {
+    "ledger_commit": null,
+    "ledger_dirty": false,
+    "source_sha256": "edaa8c49dec901bd6488624328ecef5cd63e31d526e8f07f00e272499dad9b95"
+  },
+  "compiler_version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
+  "flags": [
+    "-O3",
+    "-DNDEBUG",
+    "-march=native",
+    "-fopt-info-missed"
+  ],
+  "error": "Benchmark/checksum gate failed: reference run 1/5: 6.35 M commands/s, p99 480 ns\nreference run 2/5: 8.34 M commands/s, p99 651 ns\nreference run 3/5: 8.16 M commands/s, p99 490 ns\nreference run 4/5: 7.83 M commands/s, p99 481 ns\nreference run 5/5: 6.86 M commands/s, p99 691 ns\nbench_replay: fast-bitmap differs from reference event/trade checksum or state\n",
+  "measurement": {
+    "correctness": false,
+    "throughput": null,
+    "p50_ns": null,
+    "p99_ns": null,
+    "cv": null,
+    "spread": null,
+    "runs": [],
+    "error": "Benchmark/checksum gate failed: reference run 1/5: 6.35 M commands/s, p99 480 ns\nreference run 2/5: 8.34 M commands/s, p99 651 ns\nreference run 3/5: 8.16 M commands/s, p99 490 ns\nreference run 4/5: 7.83 M commands/s, p99 481 ns\nreference run 5/5: 6.86 M commands/s, p99 691 ns\nbench_replay: fast-bitmap differs from reference event/trade checksum or state\n",
+    "provenance": {
+      "input_sha256": "287e9fc40655dc798a55b518f510c6f5528bfad862853869227c80036fa5e05e",
+      "input": "/workspace/scratch/782b5db88681/compilerpilot/data/eval.lob",
+      "cpu": 0,
+      "pinned": true,
+      "flags": [
+        "-O3",
+        "-DNDEBUG",
+        "-march=native",
+        "-fopt-info-missed"
+      ],
+      "summary": "/tmp/compilerpilot-gate-1uccu70e/builds/be180963747c4559/mutation-gate/summary.json",
+      "runs_csv": "/tmp/compilerpilot-gate-1uccu70e/builds/be180963747c4559/mutation-gate/runs.csv",
+      "benchmark_command": [
+        "taskset",
+        "-c",
+        "0",
+        "/tmp/compilerpilot-gate-1uccu70e/builds/be180963747c4559/ledger_bench",
+        "--input",
+        "/workspace/scratch/782b5db88681/compilerpilot/data/eval.lob",
+        "--runs",
+        "5",
+        "--warmup",
+        "50000",
+        "--outdir",
+        "/tmp/compilerpilot-gate-1uccu70e/builds/be180963747c4559/mutation-gate"
+      ]
+    }
+  },
+  "cpu": 0,
+  "input_sha256": "287e9fc40655dc798a55b518f510c6f5528bfad862853869227c80036fa5e05e",
+  "pinned_source_unchanged": true
+}

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Linux-g++"
+	tests="15"
+	failures="0"
+	disabled="0"
+	skipped="0"
+	hostname="0ca8aa814a36"
+	time="5"
+	timestamp="2026-10-30T09:14:32"
+	>
+	<testcase name="engine_semantics" classname="engine_semantics" time="0.00296359" status="run">
+		<properties/>
+		<system-out>PASS FastBook.fifo_same_price
+PASS FastBook.best_price_before_time
+PASS FastBook.sell_taker_best_bid
+PASS FastBook.partial_fill_resting_residual
+PASS FastBook.partial_maker_event_order
+PASS FastBook.cancel_front
+PASS FastBook.cancel_middle
+PASS FastBook.cancel_tail
+PASS FastBook.cancel_only_removes_level
+PASS FastBook.replace_reduction_loses_priority
+PASS FastBook.invalid_replace_preserves_original
+PASS FastBook.replace_fok_rejection_atomic
+PASS FastBook.replace_can_cross
+PASS FastBook.ioc_partial_expires_residual
+PASS FastBook.ioc_non_crossing_never_rests
+PASS FastBook.fok_multiple_levels_atomic
+PASS FastBook.market_empty_expires
+PASS FastBook.market_ignores_price_and_never_rests
+PASS FastBook.market_fok_requires_all_liquidity
+PASS FastBook.full_capacity_conservative_gtc_rejection
+PASS FastBook.full_capacity_ioc_fok_market_allowed
+PASS FastBook.full_capacity_replace_reuses_slot
+PASS FastBook.maximum_quantity_and_wide_level_sum
+PASS FastBook.maximum_id_and_id_reuse
+PASS FastBook.duplicate_id_rejected_for_all_...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</system-out>
+	</testcase>
+	<testcase name="allocation_free" classname="allocation_free" time="0.0357536" status="run">
+		<properties/>
+		<system-out>bitmap: 500070 hot-path calls, 0 C++ allocations; 179355 applied, 320714 rejected
+linear: 500070 hot-path calls, 0 C++ allocations; 179355 applied, 320714 rejected
+PASS 1000140 total allocation checks
+</system-out>
+	</testcase>
+	<testcase name="spsc_stress" classname="spsc_stress" time="0.0191379" status="run">
+		<properties/>
+		<system-out>SPSC: full/empty/wrap and 1,000,000 exact Command transfers passed
+</system-out>
+	</testcase>
+	<testcase name="feed_roundtrip" classname="feed_roundtrip" time="0.0149567" status="run">
+		<properties/>
+		<system-out>PASS feed roundtrip, endian golden bytes, malformed headers/records, output atomicity, 50000 seeded mutations
+</system-out>
+	</testcase>
+	<testcase name="differential_smoke" classname="differential_smoke" time="0.0123625" status="run">
+		<properties/>
+		<system-out>PASS seed_index=0 seed=14966288679382284532 commands=10000 cumulative=10000
+PASS seed_index=1 seed=6006627078899031612 commands=10000 cumulative=20000
+PASS seed_index=2 seed=6923613682893522993 commands=10000 cumulative=30000
+PASS seed_index=3 seed=14821453552812999516 commands=10000 cumulative=40000
+PASS seed_index=4 seed=7076235178802127077 commands=10000 cumulative=50000
+{
+  "status": "pass",
+  "generator": "splitmix64-bounded-adversarial-v1",
+  "base_seed": 8330235730275514375,
+  "first_seed": 0,
+  "seeds": 5,
+  "commands_per_seed": 10000,
+  "commands_compared": 50000,
+  "reports_compared": 103624,
+  "trades_compared": 16774,
+  "applied_commands": 23866,
+  "rejected_commands": 26134,
+  "structural_checkpoints": 15,
+  "checkpoint_interval": 4096,
+  "linear_variant_compared": true,
+  "linear_fok_variant_compared": true,
+  "per_command_checks": ["process_result", "all_event_fields", "statistics", "size", "resting_quantity", "best_quotes", "quantity_conservation", "uncrossed_quotes"],
+  "checkpoint_checks": [...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</system-out>
+	</testcase>
+	<testcase name="pool_verification" classname="pool_verification" time="0.0100123" status="run">
+		<properties/>
+		<system-out>PASS empty_and_exhaustion
+PASS lifo_recycling_and_payload_reset
+PASS exhaustive_release_permutations
+PASS seeded_churn_with_independent_ownership
+PASS invariant_diagnostics_detect_corruption
+</system-out>
+	</testcase>
+	<testcase name="index_verification" classname="index_verification" time="0.0885929" status="run">
+		<properties/>
+		<system-out>PASS capacity_rounding_and_full_width_keys
+PASS collision_cluster_deletion
+PASS wrapped_clusters_and_mixed_home_buckets
+PASS long_running_half_full_churn
+PASS pool_index_slot_ownership_churn
+</system-out>
+	</testcase>
+	<testcase name="feed_view_verification" classname="feed_view_verification" time="0.00202079" status="run">
+		<properties/>
+		<system-out>PASS feed views, hostile framing, atomicity, unaligned golden wire and 1000 allocation-free cycles
+</system-out>
+	</testcase>
+	<testcase name="risk_verification" classname="risk_verification" time="0.00264085" status="run">
+		<properties/>
+		<system-out>PASS 67524 risk assertions: boundaries, exhaustive enums, 19280 inventory cases, and 10000 seeded notional cases
+</system-out>
+	</testcase>
+	<testcase name="fok_verification" classname="fok_verification" time="0.0339474" status="run">
+		<properties/>
+		<system-out>PASS bitmap_search=0 bitmap_fok=0 110 commands, exact oracle reports/state, 0 allocations
+PASS bitmap_search=0 bitmap_fok=1 110 commands, exact oracle reports/state, 0 allocations
+PASS bitmap_search=1 bitmap_fok=0 110 commands, exact oracle reports/state, 0 allocations
+PASS bitmap_search=1 bitmap_fok=1 110 commands, exact oracle reports/state, 0 allocations
+PASS 96 FOK scenarios, 440 commands
+</system-out>
+	</testcase>
+	<testcase name="study_workload_verification" classname="study_workload_verification" time="0.227208" status="run">
+		<properties/>
+		<system-out>PASS profiles_and_parameter_bounds
+PASS deterministic_but_seed_sensitive
+PASS genuine_initial_depth_and_dispersion
+PASS six_profiles_differential_replay
+PASS bounded_smallest_domain_and_depth
+PASS profile_mechanisms_and_realized_mix
+6/6 study workload tests; 1216301 assertions
+</system-out>
+	</testcase>
+	<testcase name="study_observer_verification" classname="study_observer_verification" time="0.0019862" status="run">
+		<properties/>
+		<system-out>Study observer: FIFO, partial/multi-maker fills, cancellation, replace, atomic FOK, residuals, wide quantities and tamper checks pass.
+</system-out>
+	</testcase>
+	<testcase name="evidence_validation" classname="evidence_validation" time="0.0761267" status="run">
+		<properties/>
+		<system-out>{
+  "derived": {
+    "bitmap_linear_p999_reduction_percent": "9.51219512195",
+    "bitmap_linear_p99_reduction_percent": "9.96677740864",
+    "bitmap_linear_throughput_improvement_percent": "0.353423757757",
+    "bitmap_reference_throughput_ratio": "2.27110879860"
+  },
+  "verified_commands_per_run": 1000000,
+  "verified_engine_runs": 15,
+  "verified_latency_samples": 15000000
+}
+</system-out>
+	</testcase>
+	<testcase name="documentation_links" classname="documentation_links" time="0.0459085" status="run">
+		<properties/>
+		<system-out>Checked 16 Markdown files; 0 local-link problems.
+</system-out>
+	</testcase>
+	<testcase name="tooling_tamper_tests" classname="tooling_tamper_tests" time="5.27206" status="run">
+		<properties/>
+		<system-out>......................................................................................................
+----------------------------------------------------------------------
+Ran 102 tests in 5.093s
+
+OK
+</system-out>
+	</testcase>
+</testsuite>

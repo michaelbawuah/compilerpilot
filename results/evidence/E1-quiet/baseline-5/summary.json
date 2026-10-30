@@ -1,0 +1,22 @@
+{
+  "schema_version":1,
+  "commands":1000000,
+  "seed":null,
+  "input":"/workspace/scratch/782b5db88681/compilerpilot/data/eval.lob",
+  "runs":5,
+  "warmup_commands":50000,
+  "config":{"min_price":1,"max_price":20000,"max_orders":8192},
+  "mix":{"limit":599490,"cancel":299747,"market":100763,"replace":0},
+  "generated_peak_live_orders":null,
+  "generated_empty_book_cancels":null,
+  "generated_capacity_ioc_limits":null,
+  "machine":{"system":"Linux 6.18.57 x86_64","cpu_model":"AMD EPYC 9V74 80-Core Processor","logical_cpus":9,"affinity_cpus":"0","memory":"MemTotal:       10206472 kB","governor_cpu0":""},
+  "compiler":{"version":"13.3.0","flags":"-O3 -DNDEBUG -march=native -fopt-info-missed -DNDEBUG   standard=C++23","optimization_enabled":true,"ndebug":true},
+  "clock":{"steady":true,"period_numerator":1,"period_denominator":1000000000,"median_empty_pair_ns":20},
+  "method":"Fresh empty book for each pass; warmed caches; aggregate throughput pass has no per-command clock calls and includes event checksums; latency measures process() only with caller buffer clear and event consumption outside the sample; clocks are not subtracted; exact lossless latency frequencies; medians across runs",
+  "engines":{
+    "reference": {"median_commands_per_second":8418662.51126,"median_p50_ns":100,"median_p99_ns":471,"median_p999_ns":681,"median_run_max_ns":244698,"max_ns":372008,"rejected_commands":0,"live_orders_final":2045,"events":2191466,"trades":397155,"event_checksum":741329192224569279,"trade_checksum":7031300757833197514},
+    "fast-bitmap": {"median_commands_per_second":18053388.9984,"median_p50_ns":40,"median_p99_ns":271,"median_p999_ns":380,"median_run_max_ns":238558,"max_ns":1683055,"rejected_commands":0,"live_orders_final":2045,"events":2191466,"trades":397155,"event_checksum":741329192224569279,"trade_checksum":7031300757833197514},
+    "fast-linear": {"median_commands_per_second":17394425.6641,"median_p50_ns":40,"median_p99_ns":310,"median_p999_ns":421,"median_run_max_ns":313370,"max_ns":1176816,"rejected_commands":0,"live_orders_final":2045,"events":2191466,"trades":397155,"event_checksum":741329192224569279,"trade_checksum":7031300757833197514}
+  }
+}

@@ -1,0 +1,342 @@
+{
+  "build": {
+    "build_id": "931227725f09c03b",
+    "candidate": {
+      "compiler": "gcc",
+      "opt": "O3",
+      "isa": "native",
+      "lto": false,
+      "pgo": true,
+      "inline": "default",
+      "unroll": false,
+      "vectorize": true,
+      "frame_pointer": false,
+      "alignment": 0,
+      "semantic_interposition": true
+    },
+    "build_dir": "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b",
+    "success": true,
+    "compile_s": 32.92374044400003,
+    "text_bytes": 71025,
+    "compiler_version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
+    "error": null,
+    "flags": [
+      "-O3",
+      "-DNDEBUG",
+      "-march=native",
+      "-fprofile-use=/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/profile",
+      "-fprofile-correction",
+      "-fopt-info-missed"
+    ],
+    "provenance": {
+      "ledger_commit": "c0dbffd6a036feb27e225362a92df9792d8e844a",
+      "ledger_dirty": false,
+      "source_sha256": "d46a4c63609ef2b9955d90d1260133a4f1a48815eb836229d6dc07bfb25df45e",
+      "compiler_executable": "/usr/bin/g++",
+      "configure_s": 1.0840591109999878,
+      "commands": [
+        [
+          "cmake",
+          "-S",
+          "/workspace/scratch/782b5db88681/compilerpilot/ledger",
+          "-B",
+          "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b",
+          "-DCMAKE_BUILD_TYPE=Release",
+          "-DCMAKE_CXX_COMPILER=g++",
+          "-DCMAKE_CXX_FLAGS=-O3 -DNDEBUG -march=native -fprofile-generate=/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/profile -fopt-info-missed",
+          "-DCMAKE_CXX_FLAGS_RELEASE=-DNDEBUG",
+          "-DLEDGER_NATIVE=OFF",
+          "-DBUILD_TESTING=ON",
+          "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+          "-G",
+          "Ninja"
+        ],
+        [
+          "cmake",
+          "--build",
+          "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b",
+          "--parallel",
+          "2",
+          "--target",
+          "ledger_bench"
+        ],
+        [
+          "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/ledger_bench",
+          "--input",
+          "/workspace/scratch/782b5db88681/compilerpilot/data/train.lob",
+          "--runs",
+          "1",
+          "--outdir",
+          "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/training"
+        ],
+        [
+          "cmake",
+          "-S",
+          "/workspace/scratch/782b5db88681/compilerpilot/ledger",
+          "-B",
+          "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b",
+          "-DCMAKE_BUILD_TYPE=Release",
+          "-DCMAKE_CXX_COMPILER=g++",
+          "-DCMAKE_CXX_FLAGS=-O3 -DNDEBUG -march=native -fprofile-use=/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/profile -fprofile-correction -fopt-info-missed",
+          "-DCMAKE_CXX_FLAGS_RELEASE=-DNDEBUG",
+          "-DLEDGER_NATIVE=OFF",
+          "-DBUILD_TESTING=ON",
+          "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+          "-G",
+          "Ninja"
+        ],
+        [
+          "cmake",
+          "--build",
+          "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b",
+          "--parallel",
+          "2"
+        ]
+      ],
+      "clean_build": true,
+      "training_input_sha256": "eb96b4bb8c54896f536506107870501473ec815c4777594f9dd78c45ae33517e",
+      "training_input": "/workspace/scratch/782b5db88681/compilerpilot/data/train.lob",
+      "binary_sha256": "7e3282d1b83c6190316e023b88b8595505d301e9aa33d201735aeec7d2947cbf"
+    }
+  },
+  "metric": {
+    "correctness": true,
+    "throughput": 16422152.5839,
+    "p50_ns": 50.0,
+    "p99_ns": 271.0,
+    "cv": 0.06202903611767973,
+    "spread": 1021012.1098375598,
+    "runs": [
+      17276784.8042,
+      16422152.5839,
+      17440723.4719,
+      14876013.4117,
+      16285468.3658
+    ],
+    "error": null,
+    "provenance": {
+      "input_sha256": "287e9fc40655dc798a55b518f510c6f5528bfad862853869227c80036fa5e05e",
+      "input": "/workspace/scratch/782b5db88681/compilerpilot/data/eval.lob",
+      "cpu": 0,
+      "pinned": true,
+      "flags": [
+        "-O3",
+        "-DNDEBUG",
+        "-march=native",
+        "-fprofile-use=/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/profile",
+        "-fprofile-correction",
+        "-fopt-info-missed"
+      ],
+      "summary": "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/qualification/summary.json",
+      "runs_csv": "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/qualification/runs.csv",
+      "benchmark_command": [
+        "taskset",
+        "-c",
+        "0",
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/ledger_bench",
+        "--input",
+        "/workspace/scratch/782b5db88681/compilerpilot/data/eval.lob",
+        "--runs",
+        "5",
+        "--warmup",
+        "50000",
+        "--outdir",
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/qualification"
+      ],
+      "differential_command": [
+        "taskset",
+        "-c",
+        "0",
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/ledger_differential",
+        "--seeds",
+        "5",
+        "--orders",
+        "100000",
+        "--output",
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/qualification/differential.json"
+      ],
+      "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+      "compiler": {
+        "version": "13.3.0",
+        "flags": "-O3 -DNDEBUG -march=native -fprofile-use=/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/profile -fprofile-correction -fopt-info-missed -DNDEBUG   standard=C++23",
+        "optimization_enabled": true,
+        "ndebug": true
+      },
+      "differential": {
+        "status": "pass",
+        "generator": "splitmix64-bounded-adversarial-v1",
+        "base_seed": 8330235730275514375,
+        "first_seed": 0,
+        "seeds": 5,
+        "commands_per_seed": 100000,
+        "commands_compared": 500000,
+        "reports_compared": 1047284,
+        "trades_compared": 171010,
+        "applied_commands": 237011,
+        "rejected_commands": 262989,
+        "structural_checkpoints": 125,
+        "checkpoint_interval": 4096,
+        "linear_variant_compared": true,
+        "linear_fok_variant_compared": true,
+        "per_command_checks": [
+          "process_result",
+          "all_event_fields",
+          "statistics",
+          "size",
+          "resting_quantity",
+          "best_quotes",
+          "quantity_conservation",
+          "uncrossed_quotes"
+        ],
+        "checkpoint_checks": [
+          "full_structural_invariants",
+          "full_FIFO_orders",
+          "all_levels",
+          "all_statistics"
+        ],
+        "elapsed_seconds": 0.116789
+      }
+    },
+    "checksums": {
+      "event_checksum": 741329192224569279,
+      "trade_checksum": 7031300757833197514,
+      "events": 2191466,
+      "trades": 397155,
+      "rejected_commands": 0,
+      "live_orders_final": 2045
+    }
+  },
+  "automated_profile_verification": {
+    "correctness": true,
+    "reason": "Core profile artifacts are present and the compiler reported no missing or stale core data",
+    "profile_hashes": {
+      "profile/#workspace#scratch#782b5db88681#compilerpilot#builds#qualification#931227725f09c03b#CMakeFiles#ledger.dir#src#book.cpp.gcda": "7ba60517b8ea6f2c59871d3a28988df3600d4fbc59ec718451b0028caccbb03b",
+      "profile/#workspace#scratch#782b5db88681#compilerpilot#builds#qualification#931227725f09c03b#CMakeFiles#ledger.dir#src#reference_book.cpp.gcda": "ac2adcfa83d29e98f7221206723be2cfc6e4bbaf69acd7fa175ef71165d5793a",
+      "profile/#workspace#scratch#782b5db88681#compilerpilot#builds#qualification#931227725f09c03b#CMakeFiles#ledger.dir#src#feed.cpp.gcda": "275734e7f283f8552cc97e7bf58b8f509bcac05af89e5d5d475148fe2cda32ea",
+      "profile/#workspace#scratch#782b5db88681#compilerpilot#builds#qualification#931227725f09c03b#CMakeFiles#ledger_bench.dir#bench#bench_replay.cpp.gcda": "d817d4a2bd53d7575e6a3d64efe598f5b254952821a6103a40c514300820ff47"
+    },
+    "counts": {},
+    "diagnostics": [
+      {
+        "source": "feed_view.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "/workspace/scratch/782b5db88681/compilerpilot/ledger/src/feed_view.cpp:49:1: warning: \u2018/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/profile/#workspace#scratch#782b5db88681#compilerpilot#builds#qualification#931227725f09c03b#CMakeFiles#ledger.dir#src#feed_view.cpp.gcda\u2019 profile count data file not found [-Wmissing-profile]"
+      },
+      {
+        "source": "replay.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "/workspace/scratch/782b5db88681/compilerpilot/ledger/src/replay.cpp:83:1: warning: \u2018/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/profile/#workspace#scratch#782b5db88681#compilerpilot#builds#qualification#931227725f09c03b#CMakeFiles#ledger_replay.dir#src#replay.cpp.gcda\u2019 profile count data file not found [-Wmissing-profile]"
+      },
+      {
+        "source": "study_workloads.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "/workspace/scratch/782b5db88681/compilerpilot/ledger/src/study_workloads.cpp:373:1: warning: \u2018/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/profile/#workspace#scratch#782b5db88681#compilerpilot#builds#qualification#931227725f09c03b#CMakeFiles#ledger.dir#src#study_workloads.cpp.gcda\u2019 profile count data file not found [-Wmissing-profile]"
+      },
+      {
+        "source": "gen_orders.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "/workspace/scratch/782b5db88681/compilerpilot/ledger/bench/gen_orders.cpp:58:1: warning: \u2018/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/profile/#workspace#scratch#782b5db88681#compilerpilot#builds#qualification#931227725f09c03b#CMakeFiles#ledger_generate.dir#bench#gen_orders.cpp.gcda\u2019 profile count data file not found [-Wmissing-profile]"
+      },
+      {
+        "source": "bench_spsc.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "/workspace/scratch/782b5db88681/compilerpilot/ledger/bench/bench_spsc.cpp:258:1: warning: \u2018/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/profile/#workspace#scratch#782b5db88681#compilerpilot#builds#qualification#931227725f09c03b#CMakeFiles#ledger_spsc_bench.dir#bench#bench_spsc.cpp.gcda\u2019 profile count data file not found [-Wmissing-profile]"
+      },
+      {
+        "source": "bench_study.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "/workspace/scratch/782b5db88681/compilerpilot/ledger/bench/bench_study.cpp:423:1: warning: \u2018/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/profile/#workspace#scratch#782b5db88681#compilerpilot#builds#qualification#931227725f09c03b#CMakeFiles#ledger_study.dir#bench#bench_study.cpp.gcda\u2019 profile count data file not found [-Wmissing-profile]"
+      },
+      {
+        "source": "market_maker.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "/workspace/scratch/782b5db88681/compilerpilot/ledger/src/market_maker.cpp:203:1: warning: \u2018/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/profile/#workspace#scratch#782b5db88681#compilerpilot#builds#qualification#931227725f09c03b#CMakeFiles#ledger_market_maker.dir#src#market_maker.cpp.gcda\u2019 profile count data file not found [-Wmissing-profile]"
+      },
+      {
+        "source": "risk_demo.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "/workspace/scratch/782b5db88681/compilerpilot/ledger/examples/risk_demo.cpp:65:1: warning: \u2018/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/profile/#workspace#scratch#782b5db88681#compilerpilot#builds#qualification#931227725f09c03b#CMakeFiles#ledger_risk_demo.dir#examples#risk_demo.cpp.gcda\u2019 profile count data file not found [-Wmissing-profile]"
+      },
+      {
+        "source": "memory_tests.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "/workspace/scratch/782b5db88681/compilerpilot/ledger/tests/unit/memory_tests.cpp:132:1: warning: \u2018/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/profile/#workspace#scratch#782b5db88681#compilerpilot#builds#qualification#931227725f09c03b#CMakeFiles#ledger_allocation_tests.dir#tests#unit#memory_tests.cpp.gcda\u2019 profile count data file not found [-Wmissing-profile]"
+      },
+      {
+        "source": "spsc_tests.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "/workspace/scratch/782b5db88681/compilerpilot/ledger/tests/unit/spsc_tests.cpp:69:1: warning: \u2018/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/profile/#workspace#scratch#782b5db88681#compilerpilot#builds#qualification#931227725f09c03b#CMakeFiles#ledger_spsc_tests.dir#tests#unit#spsc_tests.cpp.gcda\u2019 profile count data file not found [-Wmissing-profile]"
+      },
+      {
+        "source": "engine_tests.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "/workspace/scratch/782b5db88681/compilerpilot/ledger/tests/unit/engine_tests.cpp:325:1: warning: \u2018/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/profile/#workspace#scratch#782b5db88681#compilerpilot#builds#qualification#931227725f09c03b#CMakeFiles#ledger_tests.dir#tests#unit#engine_tests.cpp.gcda\u2019 profile count data file not found [-Wmissing-profile]"
+      },
+      {
+        "source": "feed_tests.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "/workspace/scratch/782b5db88681/compilerpilot/ledger/tests/unit/feed_tests.cpp:88:1: warning: \u2018/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/profile/#workspace#scratch#782b5db88681#compilerpilot#builds#qualification#931227725f09c03b#CMakeFiles#ledger_feed_tests.dir#tests#unit#feed_tests.cpp.gcda\u2019 profile count data file not found [-Wmissing-profile]"
+      },
+      {
+        "source": "pool_tests.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "/workspace/scratch/782b5db88681/compilerpilot/ledger/tests/unit/pool_tests.cpp:221:1: warning: \u2018/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/profile/#workspace#scratch#782b5db88681#compilerpilot#builds#qualification#931227725f09c03b#CMakeFiles#ledger_pool_tests.dir#tests#unit#pool_tests.cpp.gcda\u2019 profile count data file not found [-Wmissing-profile]"
+      },
+      {
+        "source": "differential.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "/workspace/scratch/782b5db88681/compilerpilot/ledger/tests/differential/differential.cpp:210:1: warning: \u2018/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/profile/#workspace#scratch#782b5db88681#compilerpilot#builds#qualification#931227725f09c03b#CMakeFiles#ledger_differential.dir#tests#differential#differential.cpp.gcda\u2019 profile count data file not found [-Wmissing-profile]"
+      },
+      {
+        "source": "index_tests.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "/workspace/scratch/782b5db88681/compilerpilot/ledger/tests/unit/index_tests.cpp:288:1: warning: \u2018/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/profile/#workspace#scratch#782b5db88681#compilerpilot#builds#qualification#931227725f09c03b#CMakeFiles#ledger_index_tests.dir#tests#unit#index_tests.cpp.gcda\u2019 profile count data file not found [-Wmissing-profile]"
+      },
+      {
+        "source": "feed_view_tests.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "/workspace/scratch/782b5db88681/compilerpilot/ledger/tests/unit/feed_view_tests.cpp:242:1: warning: \u2018/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/profile/#workspace#scratch#782b5db88681#compilerpilot#builds#qualification#931227725f09c03b#CMakeFiles#ledger_feed_view_tests.dir#tests#unit#feed_view_tests.cpp.gcda\u2019 profile count data file not found [-Wmissing-profile]"
+      },
+      {
+        "source": "risk_tests.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "/workspace/scratch/782b5db88681/compilerpilot/ledger/tests/unit/risk_tests.cpp:353:1: warning: \u2018/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/profile/#workspace#scratch#782b5db88681#compilerpilot#builds#qualification#931227725f09c03b#CMakeFiles#ledger_risk_tests.dir#tests#unit#risk_tests.cpp.gcda\u2019 profile count data file not found [-Wmissing-profile]"
+      },
+      {
+        "source": "fok_tests.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "/workspace/scratch/782b5db88681/compilerpilot/ledger/tests/unit/fok_tests.cpp:212:1: warning: \u2018/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/profile/#workspace#scratch#782b5db88681#compilerpilot#builds#qualification#931227725f09c03b#CMakeFiles#ledger_fok_tests.dir#tests#unit#fok_tests.cpp.gcda\u2019 profile count data file not found [-Wmissing-profile]"
+      },
+      {
+        "source": "study_observer_tests.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "/workspace/scratch/782b5db88681/compilerpilot/ledger/tests/unit/study_observer_tests.cpp:101:1: warning: \u2018/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/profile/#workspace#scratch#782b5db88681#compilerpilot#builds#qualification#931227725f09c03b#CMakeFiles#ledger_study_observer_tests.dir#tests#unit#study_observer_tests.cpp.gcda\u2019 profile count data file not found [-Wmissing-profile]"
+      },
+      {
+        "source": "study_workload_tests.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "/workspace/scratch/782b5db88681/compilerpilot/ledger/tests/unit/study_workload_tests.cpp:261:1: warning: \u2018/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/profile/#workspace#scratch#782b5db88681#compilerpilot#builds#qualification#931227725f09c03b#CMakeFiles#ledger_study_workload_tests.dir#tests#unit#study_workload_tests.cpp.gcda\u2019 profile count data file not found [-Wmissing-profile]"
+      }
+    ]
+  }
+}

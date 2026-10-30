@@ -1,0 +1,100 @@
+{
+  "build_id": "931227725f09c03b",
+  "candidate": {
+    "compiler": "gcc",
+    "opt": "O3",
+    "isa": "native",
+    "lto": false,
+    "pgo": true,
+    "inline": "default",
+    "unroll": false,
+    "vectorize": true,
+    "frame_pointer": false,
+    "alignment": 0,
+    "semantic_interposition": true
+  },
+  "build_dir": "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b",
+  "success": true,
+  "compile_s": 32.92374044400003,
+  "text_bytes": 71025,
+  "compiler_version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
+  "error": null,
+  "flags": [
+    "-O3",
+    "-DNDEBUG",
+    "-march=native",
+    "-fprofile-use=/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/profile",
+    "-fprofile-correction",
+    "-fopt-info-missed"
+  ],
+  "provenance": {
+    "ledger_commit": "c0dbffd6a036feb27e225362a92df9792d8e844a",
+    "ledger_dirty": false,
+    "source_sha256": "d46a4c63609ef2b9955d90d1260133a4f1a48815eb836229d6dc07bfb25df45e",
+    "compiler_executable": "/usr/bin/g++",
+    "configure_s": 1.0840591109999878,
+    "commands": [
+      [
+        "cmake",
+        "-S",
+        "/workspace/scratch/782b5db88681/compilerpilot/ledger",
+        "-B",
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_CXX_COMPILER=g++",
+        "-DCMAKE_CXX_FLAGS=-O3 -DNDEBUG -march=native -fprofile-generate=/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/profile -fopt-info-missed",
+        "-DCMAKE_CXX_FLAGS_RELEASE=-DNDEBUG",
+        "-DLEDGER_NATIVE=OFF",
+        "-DBUILD_TESTING=ON",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+        "-G",
+        "Ninja"
+      ],
+      [
+        "cmake",
+        "--build",
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b",
+        "--parallel",
+        "2",
+        "--target",
+        "ledger_bench"
+      ],
+      [
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/ledger_bench",
+        "--input",
+        "/workspace/scratch/782b5db88681/compilerpilot/data/train.lob",
+        "--runs",
+        "1",
+        "--outdir",
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/training"
+      ],
+      [
+        "cmake",
+        "-S",
+        "/workspace/scratch/782b5db88681/compilerpilot/ledger",
+        "-B",
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_CXX_COMPILER=g++",
+        "-DCMAKE_CXX_FLAGS=-O3 -DNDEBUG -march=native -fprofile-use=/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b/profile -fprofile-correction -fopt-info-missed",
+        "-DCMAKE_CXX_FLAGS_RELEASE=-DNDEBUG",
+        "-DLEDGER_NATIVE=OFF",
+        "-DBUILD_TESTING=ON",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+        "-G",
+        "Ninja"
+      ],
+      [
+        "cmake",
+        "--build",
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/931227725f09c03b",
+        "--parallel",
+        "2"
+      ]
+    ],
+    "clean_build": true,
+    "training_input_sha256": "eb96b4bb8c54896f536506107870501473ec815c4777594f9dd78c45ae33517e",
+    "training_input": "/workspace/scratch/782b5db88681/compilerpilot/data/train.lob",
+    "binary_sha256": "7e3282d1b83c6190316e023b88b8595505d301e9aa33d201735aeec7d2947cbf"
+  }
+}

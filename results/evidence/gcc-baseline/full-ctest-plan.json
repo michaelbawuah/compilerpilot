@@ -1,0 +1,416 @@
+{
+  "backtraceGraph" : 
+  {
+    "commands" : 
+    [
+      "add_test"
+    ],
+    "files" : 
+    [
+      "/workspace/scratch/782b5db88681/compilerpilot/ledger/CMakeLists.txt"
+    ],
+    "nodes" : 
+    [
+      {
+        "file" : 0
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 69,
+        "parent" : 0
+      },
+      {
+        "file" : 0
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 70,
+        "parent" : 2
+      },
+      {
+        "file" : 0
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 71,
+        "parent" : 4
+      },
+      {
+        "file" : 0
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 72,
+        "parent" : 6
+      },
+      {
+        "file" : 0
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 73,
+        "parent" : 8
+      },
+      {
+        "file" : 0
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 77,
+        "parent" : 10
+      },
+      {
+        "file" : 0
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 77,
+        "parent" : 12
+      },
+      {
+        "file" : 0
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 77,
+        "parent" : 14
+      },
+      {
+        "file" : 0
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 77,
+        "parent" : 16
+      },
+      {
+        "file" : 0
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 77,
+        "parent" : 18
+      },
+      {
+        "file" : 0
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 77,
+        "parent" : 20
+      },
+      {
+        "file" : 0
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 77,
+        "parent" : 22
+      },
+      {
+        "file" : 0
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 81,
+        "parent" : 24
+      },
+      {
+        "file" : 0
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 82,
+        "parent" : 26
+      },
+      {
+        "file" : 0
+      },
+      {
+        "command" : 0,
+        "file" : 0,
+        "line" : 83,
+        "parent" : 28
+      }
+    ]
+  },
+  "kind" : "ctestInfo",
+  "tests" : 
+  [
+    {
+      "backtrace" : 1,
+      "command" : 
+      [
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559/ledger_tests"
+      ],
+      "name" : "engine_semantics",
+      "properties" : 
+      [
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559"
+        }
+      ]
+    },
+    {
+      "backtrace" : 3,
+      "command" : 
+      [
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559/ledger_allocation_tests"
+      ],
+      "name" : "allocation_free",
+      "properties" : 
+      [
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559"
+        }
+      ]
+    },
+    {
+      "backtrace" : 5,
+      "command" : 
+      [
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559/ledger_spsc_tests"
+      ],
+      "name" : "spsc_stress",
+      "properties" : 
+      [
+        {
+          "name" : "TIMEOUT",
+          "value" : 120.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559"
+        }
+      ]
+    },
+    {
+      "backtrace" : 7,
+      "command" : 
+      [
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559/ledger_feed_tests"
+      ],
+      "name" : "feed_roundtrip",
+      "properties" : 
+      [
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559"
+        }
+      ]
+    },
+    {
+      "backtrace" : 9,
+      "command" : 
+      [
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559/ledger_differential",
+        "--seeds",
+        "5",
+        "--orders",
+        "10000"
+      ],
+      "name" : "differential_smoke",
+      "properties" : 
+      [
+        {
+          "name" : "TIMEOUT",
+          "value" : 120.0
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559"
+        }
+      ]
+    },
+    {
+      "backtrace" : 11,
+      "command" : 
+      [
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559/ledger_pool_tests"
+      ],
+      "name" : "pool_verification",
+      "properties" : 
+      [
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559"
+        }
+      ]
+    },
+    {
+      "backtrace" : 13,
+      "command" : 
+      [
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559/ledger_index_tests"
+      ],
+      "name" : "index_verification",
+      "properties" : 
+      [
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559"
+        }
+      ]
+    },
+    {
+      "backtrace" : 15,
+      "command" : 
+      [
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559/ledger_feed_view_tests"
+      ],
+      "name" : "feed_view_verification",
+      "properties" : 
+      [
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559"
+        }
+      ]
+    },
+    {
+      "backtrace" : 17,
+      "command" : 
+      [
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559/ledger_risk_tests"
+      ],
+      "name" : "risk_verification",
+      "properties" : 
+      [
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559"
+        }
+      ]
+    },
+    {
+      "backtrace" : 19,
+      "command" : 
+      [
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559/ledger_fok_tests"
+      ],
+      "name" : "fok_verification",
+      "properties" : 
+      [
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559"
+        }
+      ]
+    },
+    {
+      "backtrace" : 21,
+      "command" : 
+      [
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559/ledger_study_workload_tests"
+      ],
+      "name" : "study_workload_verification",
+      "properties" : 
+      [
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559"
+        }
+      ]
+    },
+    {
+      "backtrace" : 23,
+      "command" : 
+      [
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559/ledger_study_observer_tests"
+      ],
+      "name" : "study_observer_verification",
+      "properties" : 
+      [
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559"
+        }
+      ]
+    },
+    {
+      "backtrace" : 25,
+      "command" : 
+      [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "tools/verify_results.py",
+        "bench/results/core-v2"
+      ],
+      "name" : "evidence_validation",
+      "properties" : 
+      [
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/workspace/scratch/782b5db88681/compilerpilot/ledger"
+        }
+      ]
+    },
+    {
+      "backtrace" : 27,
+      "command" : 
+      [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "tools/check_docs.py",
+        "--root",
+        "."
+      ],
+      "name" : "documentation_links",
+      "properties" : 
+      [
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/workspace/scratch/782b5db88681/compilerpilot/ledger"
+        }
+      ]
+    },
+    {
+      "backtrace" : 29,
+      "command" : 
+      [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/tooling",
+        "-p",
+        "test_*.py"
+      ],
+      "name" : "tooling_tamper_tests",
+      "properties" : 
+      [
+        {
+          "name" : "ENVIRONMENT",
+          "value" : 
+          [
+            "LEDGER_BINARY_DIR=/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559"
+          ]
+        },
+        {
+          "name" : "WORKING_DIRECTORY",
+          "value" : "/workspace/scratch/782b5db88681/compilerpilot/ledger"
+        }
+      ]
+    }
+  ],
+  "version" : 
+  {
+    "major" : 1,
+    "minor" : 0
+  }
+}

@@ -1,0 +1,35 @@
+Test project /workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559
+      Start  1: engine_semantics
+ 1/15 Test  #1: engine_semantics .................   Passed    0.00 sec
+      Start  2: allocation_free
+ 2/15 Test  #2: allocation_free ..................   Passed    0.04 sec
+      Start  3: spsc_stress
+ 3/15 Test  #3: spsc_stress ......................   Passed    0.02 sec
+      Start  4: feed_roundtrip
+ 4/15 Test  #4: feed_roundtrip ...................   Passed    0.01 sec
+      Start  5: differential_smoke
+ 5/15 Test  #5: differential_smoke ...............   Passed    0.01 sec
+      Start  6: pool_verification
+ 6/15 Test  #6: pool_verification ................   Passed    0.01 sec
+      Start  7: index_verification
+ 7/15 Test  #7: index_verification ...............   Passed    0.09 sec
+      Start  8: feed_view_verification
+ 8/15 Test  #8: feed_view_verification ...........   Passed    0.00 sec
+      Start  9: risk_verification
+ 9/15 Test  #9: risk_verification ................   Passed    0.00 sec
+      Start 10: fok_verification
+10/15 Test #10: fok_verification .................   Passed    0.03 sec
+      Start 11: study_workload_verification
+11/15 Test #11: study_workload_verification ......   Passed    0.23 sec
+      Start 12: study_observer_verification
+12/15 Test #12: study_observer_verification ......   Passed    0.00 sec
+      Start 13: evidence_validation
+13/15 Test #13: evidence_validation ..............   Passed    0.08 sec
+      Start 14: documentation_links
+14/15 Test #14: documentation_links ..............   Passed    0.05 sec
+      Start 15: tooling_tamper_tests
+15/15 Test #15: tooling_tamper_tests .............   Passed    5.27 sec
+
+100% tests passed out of 15
+
+Total Test time (real) =   5.85 sec

@@ -1,0 +1,187 @@
+{
+  "build": {
+    "build_id": "be180963747c4559",
+    "candidate": {
+      "compiler": "gcc",
+      "opt": "O3",
+      "isa": "native",
+      "lto": false,
+      "pgo": false,
+      "inline": "default",
+      "unroll": false,
+      "vectorize": true,
+      "frame_pointer": false,
+      "alignment": 0,
+      "semantic_interposition": true
+    },
+    "build_dir": "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559",
+    "success": true,
+    "compile_s": 20.141318928999908,
+    "text_bytes": 97166,
+    "compiler_version": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
+    "error": null,
+    "flags": [
+      "-O3",
+      "-DNDEBUG",
+      "-march=native",
+      "-fopt-info-missed"
+    ],
+    "provenance": {
+      "ledger_commit": "c0dbffd6a036feb27e225362a92df9792d8e844a",
+      "ledger_dirty": false,
+      "source_sha256": "d46a4c63609ef2b9955d90d1260133a4f1a48815eb836229d6dc07bfb25df45e",
+      "compiler_executable": "/usr/bin/g++",
+      "configure_s": 0.6154126449998785,
+      "commands": [
+        [
+          "cmake",
+          "-S",
+          "/workspace/scratch/782b5db88681/compilerpilot/ledger",
+          "-B",
+          "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559",
+          "-DCMAKE_BUILD_TYPE=Release",
+          "-DCMAKE_CXX_COMPILER=g++",
+          "-DCMAKE_CXX_FLAGS=-O3 -DNDEBUG -march=native -fopt-info-missed",
+          "-DCMAKE_CXX_FLAGS_RELEASE=-DNDEBUG",
+          "-DLEDGER_NATIVE=OFF",
+          "-DBUILD_TESTING=ON",
+          "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+          "-G",
+          "Ninja"
+        ],
+        [
+          "cmake",
+          "--build",
+          "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559",
+          "--parallel",
+          "2"
+        ]
+      ],
+      "clean_build": true,
+      "binary_sha256": "371359567091454404beb8b56f872b3b24fe84fa6a029b347c4ff5f4a47a13d2"
+    }
+  },
+  "metric": {
+    "correctness": true,
+    "throughput": 15063323.5006,
+    "p50_ns": 50.0,
+    "p99_ns": 280.0,
+    "cv": 0.12877549368838284,
+    "spread": 2074512.4295825441,
+    "runs": [
+      18739657.2318,
+      17895366.4011,
+      14834167.1396,
+      15063323.5006,
+      14015126.049
+    ],
+    "error": null,
+    "provenance": {
+      "input_sha256": "287e9fc40655dc798a55b518f510c6f5528bfad862853869227c80036fa5e05e",
+      "input": "/workspace/scratch/782b5db88681/compilerpilot/data/eval.lob",
+      "cpu": 0,
+      "pinned": true,
+      "flags": [
+        "-O3",
+        "-DNDEBUG",
+        "-march=native",
+        "-fopt-info-missed"
+      ],
+      "summary": "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559/qualification/summary.json",
+      "runs_csv": "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559/qualification/runs.csv",
+      "benchmark_command": [
+        "taskset",
+        "-c",
+        "0",
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559/ledger_bench",
+        "--input",
+        "/workspace/scratch/782b5db88681/compilerpilot/data/eval.lob",
+        "--runs",
+        "5",
+        "--warmup",
+        "50000",
+        "--outdir",
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559/qualification"
+      ],
+      "differential_command": [
+        "taskset",
+        "-c",
+        "0",
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559/ledger_differential",
+        "--seeds",
+        "5",
+        "--orders",
+        "100000",
+        "--output",
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559/qualification/differential.json"
+      ],
+      "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+      "compiler": {
+        "version": "13.3.0",
+        "flags": "-O3 -DNDEBUG -march=native -fopt-info-missed -DNDEBUG   standard=C++23",
+        "optimization_enabled": true,
+        "ndebug": true
+      },
+      "differential": {
+        "status": "pass",
+        "generator": "splitmix64-bounded-adversarial-v1",
+        "base_seed": 8330235730275514375,
+        "first_seed": 0,
+        "seeds": 5,
+        "commands_per_seed": 100000,
+        "commands_compared": 500000,
+        "reports_compared": 1047284,
+        "trades_compared": 171010,
+        "applied_commands": 237011,
+        "rejected_commands": 262989,
+        "structural_checkpoints": 125,
+        "checkpoint_interval": 4096,
+        "linear_variant_compared": true,
+        "linear_fok_variant_compared": true,
+        "per_command_checks": [
+          "process_result",
+          "all_event_fields",
+          "statistics",
+          "size",
+          "resting_quantity",
+          "best_quotes",
+          "quantity_conservation",
+          "uncrossed_quotes"
+        ],
+        "checkpoint_checks": [
+          "full_structural_invariants",
+          "full_FIFO_orders",
+          "all_levels",
+          "all_statistics"
+        ],
+        "elapsed_seconds": 0.112011
+      }
+    },
+    "checksums": {
+      "event_checksum": 741329192224569279,
+      "trade_checksum": 7031300757833197514,
+      "events": 2191466,
+      "trades": 397155,
+      "rejected_commands": 0,
+      "live_orders_final": 2045
+    }
+  },
+  "counters": {
+    "cycles": null,
+    "instructions": null,
+    "branch_misses": null,
+    "branches": null,
+    "icache_misses": null,
+    "ipc": null,
+    "branch_miss_pct": null,
+    "available": false,
+    "unavailable_events": [
+      "L1-icache-load-misses",
+      "branch-misses",
+      "branches",
+      "cycles",
+      "instructions"
+    ],
+    "reason": "reference run 1/1: 6.53 M commands/s, p99 550 ns\nfast-bitmap run 1/1: 12.63 M commands/s, p99 320 ns\nfast-linear run 1/1: 13.53 M commands/s, p99 390 ns\n/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/be180963747c4559/counters/summary.json\n<not supported>;;cycles:u;0;100.00;;\n<not supported>;;instructions:u;0;100.00;;\n<not supported>;;branches:u;0;100.00;;\n<not supported>;;branch-misses:u;0;100.00;;\n<not supported>;;L1-icache-load-misses:u;0;100.00;;\n"
+  }
+}

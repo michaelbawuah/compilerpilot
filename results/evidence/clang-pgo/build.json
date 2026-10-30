@@ -1,0 +1,101 @@
+{
+  "build_id": "19f4d9a83f510de9",
+  "candidate": {
+    "compiler": "clang",
+    "opt": "O3",
+    "isa": "native",
+    "lto": true,
+    "pgo": true,
+    "inline": "default",
+    "unroll": false,
+    "vectorize": true,
+    "frame_pointer": false,
+    "alignment": 0,
+    "semantic_interposition": true
+  },
+  "build_dir": "/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9",
+  "success": true,
+  "compile_s": 37.805056770999954,
+  "text_bytes": 62888,
+  "compiler_version": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+  "error": null,
+  "flags": [
+    "-O3",
+    "-DNDEBUG",
+    "-march=native",
+    "-flto=thin",
+    "-fuse-ld=lld",
+    "-fprofile-instr-use=/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9/profile/merged.profdata",
+    "-fsave-optimization-record"
+  ],
+  "provenance": {
+    "ledger_commit": "c0dbffd6a036feb27e225362a92df9792d8e844a",
+    "ledger_dirty": false,
+    "source_sha256": "d46a4c63609ef2b9955d90d1260133a4f1a48815eb836229d6dc07bfb25df45e",
+    "compiler_executable": "/root/.local/bin/clang++",
+    "configure_s": 1.0306557470000826,
+    "commands": [
+      [
+        "cmake",
+        "-S",
+        "/workspace/scratch/782b5db88681/compilerpilot/ledger",
+        "-B",
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_CXX_COMPILER=clang++",
+        "-DCMAKE_CXX_FLAGS=-O3 -DNDEBUG -march=native -flto=thin -fuse-ld=lld -fprofile-instr-generate=/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9/profile/default-%p.profraw -fsave-optimization-record",
+        "-DCMAKE_CXX_FLAGS_RELEASE=-DNDEBUG",
+        "-DLEDGER_NATIVE=OFF",
+        "-DBUILD_TESTING=ON",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+        "-G",
+        "Ninja"
+      ],
+      [
+        "cmake",
+        "--build",
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9",
+        "--parallel",
+        "2",
+        "--target",
+        "ledger_bench"
+      ],
+      [
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9/ledger_bench",
+        "--input",
+        "/workspace/scratch/782b5db88681/compilerpilot/data/train.lob",
+        "--runs",
+        "1",
+        "--outdir",
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9/training"
+      ],
+      [
+        "cmake",
+        "-S",
+        "/workspace/scratch/782b5db88681/compilerpilot/ledger",
+        "-B",
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_CXX_COMPILER=clang++",
+        "-DCMAKE_CXX_FLAGS=-O3 -DNDEBUG -march=native -flto=thin -fuse-ld=lld -fprofile-instr-use=/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9/profile/merged.profdata -fsave-optimization-record",
+        "-DCMAKE_CXX_FLAGS_RELEASE=-DNDEBUG",
+        "-DLEDGER_NATIVE=OFF",
+        "-DBUILD_TESTING=ON",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+        "-G",
+        "Ninja"
+      ],
+      [
+        "cmake",
+        "--build",
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9",
+        "--parallel",
+        "2"
+      ]
+    ],
+    "clean_build": true,
+    "training_input_sha256": "eb96b4bb8c54896f536506107870501473ec815c4777594f9dd78c45ae33517e",
+    "training_input": "/workspace/scratch/782b5db88681/compilerpilot/data/train.lob",
+    "binary_sha256": "6180cfe8cea8522d3ea80c2fed609a324d7654913ed9d5828434bbcf677717f9"
+  }
+}

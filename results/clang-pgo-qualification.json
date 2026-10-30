@@ -1,0 +1,496 @@
+{
+  "purpose": "functional qualification; shared noisy host; no performance claim",
+  "build": {
+    "build_id": "19f4d9a83f510de9",
+    "candidate": {
+      "compiler": "clang",
+      "opt": "O3",
+      "isa": "native",
+      "lto": true,
+      "pgo": true,
+      "inline": "default",
+      "unroll": false,
+      "vectorize": true,
+      "frame_pointer": false,
+      "alignment": 0,
+      "semantic_interposition": true
+    },
+    "build_dir": "/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9",
+    "success": true,
+    "compile_s": 37.805056770999954,
+    "text_bytes": 62888,
+    "compiler_version": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+    "error": null,
+    "flags": [
+      "-O3",
+      "-DNDEBUG",
+      "-march=native",
+      "-flto=thin",
+      "-fuse-ld=lld",
+      "-fprofile-instr-use=/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9/profile/merged.profdata",
+      "-fsave-optimization-record"
+    ],
+    "provenance": {
+      "ledger_commit": "c0dbffd6a036feb27e225362a92df9792d8e844a",
+      "ledger_dirty": false,
+      "source_sha256": "d46a4c63609ef2b9955d90d1260133a4f1a48815eb836229d6dc07bfb25df45e",
+      "compiler_executable": "/root/.local/bin/clang++",
+      "configure_s": 1.0306557470000826,
+      "commands": [
+        [
+          "cmake",
+          "-S",
+          "/workspace/scratch/782b5db88681/compilerpilot/ledger",
+          "-B",
+          "/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9",
+          "-DCMAKE_BUILD_TYPE=Release",
+          "-DCMAKE_CXX_COMPILER=clang++",
+          "-DCMAKE_CXX_FLAGS=-O3 -DNDEBUG -march=native -flto=thin -fuse-ld=lld -fprofile-instr-generate=/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9/profile/default-%p.profraw -fsave-optimization-record",
+          "-DCMAKE_CXX_FLAGS_RELEASE=-DNDEBUG",
+          "-DLEDGER_NATIVE=OFF",
+          "-DBUILD_TESTING=ON",
+          "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+          "-G",
+          "Ninja"
+        ],
+        [
+          "cmake",
+          "--build",
+          "/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9",
+          "--parallel",
+          "2",
+          "--target",
+          "ledger_bench"
+        ],
+        [
+          "/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9/ledger_bench",
+          "--input",
+          "/workspace/scratch/782b5db88681/compilerpilot/data/train.lob",
+          "--runs",
+          "1",
+          "--outdir",
+          "/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9/training"
+        ],
+        [
+          "cmake",
+          "-S",
+          "/workspace/scratch/782b5db88681/compilerpilot/ledger",
+          "-B",
+          "/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9",
+          "-DCMAKE_BUILD_TYPE=Release",
+          "-DCMAKE_CXX_COMPILER=clang++",
+          "-DCMAKE_CXX_FLAGS=-O3 -DNDEBUG -march=native -flto=thin -fuse-ld=lld -fprofile-instr-use=/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9/profile/merged.profdata -fsave-optimization-record",
+          "-DCMAKE_CXX_FLAGS_RELEASE=-DNDEBUG",
+          "-DLEDGER_NATIVE=OFF",
+          "-DBUILD_TESTING=ON",
+          "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+          "-G",
+          "Ninja"
+        ],
+        [
+          "cmake",
+          "--build",
+          "/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9",
+          "--parallel",
+          "2"
+        ]
+      ],
+      "clean_build": true,
+      "training_input_sha256": "eb96b4bb8c54896f536506107870501473ec815c4777594f9dd78c45ae33517e",
+      "training_input": "/workspace/scratch/782b5db88681/compilerpilot/data/train.lob",
+      "binary_sha256": "6180cfe8cea8522d3ea80c2fed609a324d7654913ed9d5828434bbcf677717f9"
+    }
+  },
+  "measurement": {
+    "correctness": true,
+    "throughput": 15411524.6179,
+    "p50_ns": 50.0,
+    "p99_ns": 220.0,
+    "cv": 0.13895346530749275,
+    "spread": 2294788.170372,
+    "runs": [
+      17532161.3913,
+      15411524.6179,
+      20084063.4543,
+      14721145.3663,
+      14825086.5133
+    ],
+    "error": null,
+    "provenance": {
+      "input_sha256": "287e9fc40655dc798a55b518f510c6f5528bfad862853869227c80036fa5e05e",
+      "input": "/workspace/scratch/782b5db88681/compilerpilot/data/eval.lob",
+      "cpu": 0,
+      "pinned": true,
+      "flags": [
+        "-O3",
+        "-DNDEBUG",
+        "-march=native",
+        "-flto=thin",
+        "-fuse-ld=lld",
+        "-fprofile-instr-use=/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9/profile/merged.profdata",
+        "-fsave-optimization-record"
+      ],
+      "summary": "/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9/qualification/summary.json",
+      "runs_csv": "/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9/qualification/runs.csv",
+      "benchmark_command": [
+        "taskset",
+        "-c",
+        "0",
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9/ledger_bench",
+        "--input",
+        "/workspace/scratch/782b5db88681/compilerpilot/data/eval.lob",
+        "--runs",
+        "5",
+        "--warmup",
+        "50000",
+        "--outdir",
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9/qualification"
+      ],
+      "differential_command": [
+        "taskset",
+        "-c",
+        "0",
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9/ledger_differential",
+        "--seeds",
+        "5",
+        "--orders",
+        "100000",
+        "--output",
+        "/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9/qualification/differential.json"
+      ],
+      "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+      "compiler": {
+        "version": "Ubuntu Clang 18.1.3 (1ubuntu1)",
+        "flags": "-O3 -DNDEBUG -march=native -flto=thin -fuse-ld=lld -fprofile-instr-use=/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9/profile/merged.profdata -fsave-optimization-record -DNDEBUG   standard=C++23",
+        "optimization_enabled": true,
+        "ndebug": true
+      },
+      "differential": {
+        "status": "pass",
+        "generator": "splitmix64-bounded-adversarial-v1",
+        "base_seed": 8330235730275514375,
+        "first_seed": 0,
+        "seeds": 5,
+        "commands_per_seed": 100000,
+        "commands_compared": 500000,
+        "reports_compared": 1047284,
+        "trades_compared": 171010,
+        "applied_commands": 237011,
+        "rejected_commands": 262989,
+        "structural_checkpoints": 125,
+        "checkpoint_interval": 4096,
+        "linear_variant_compared": true,
+        "linear_fok_variant_compared": true,
+        "per_command_checks": [
+          "process_result",
+          "all_event_fields",
+          "statistics",
+          "size",
+          "resting_quantity",
+          "best_quotes",
+          "quantity_conservation",
+          "uncrossed_quotes"
+        ],
+        "checkpoint_checks": [
+          "full_structural_invariants",
+          "full_FIFO_orders",
+          "all_levels",
+          "all_statistics"
+        ],
+        "elapsed_seconds": 0.111435
+      }
+    },
+    "checksums": {
+      "event_checksum": 741329192224569279,
+      "trade_checksum": 7031300757833197514,
+      "events": 2191466,
+      "trades": 397155,
+      "rejected_commands": 0,
+      "live_orders_final": 2045
+    }
+  },
+  "counters": {
+    "cycles": null,
+    "instructions": null,
+    "branch_misses": null,
+    "branches": null,
+    "icache_misses": null,
+    "ipc": null,
+    "branch_miss_pct": null,
+    "available": false,
+    "unavailable_events": [
+      "L1-icache-load-misses",
+      "branch-misses",
+      "branches",
+      "cycles",
+      "instructions"
+    ],
+    "reason": "reference run 1/1: 6.92 M commands/s, p99 471 ns\nfast-bitmap run 1/1: 15.19 M commands/s, p99 221 ns\nfast-linear run 1/1: 16.67 M commands/s, p99 260 ns\n/workspace/scratch/782b5db88681/compilerpilot/builds/clang-qualification/19f4d9a83f510de9/counters/summary.json\n<not supported>;;cycles:u;0;100.00;;\n<not supported>;;instructions:u;0;100.00;;\n<not supported>;;branches:u;0;100.00;;\n<not supported>;;branch-misses:u;0;100.00;;\n<not supported>;;L1-icache-load-misses:u;0;100.00;;\n"
+  },
+  "pgo_qualification": {
+    "profile_sha256": "42d1e9339a66ff4bd7ea474e62818d8b6f9f6a37d6f5330aa3691ecaef7c6f07",
+    "trained_function_counts": {
+      "_ZN6ledger8FastBook7processERKNS_7CommandERNS_11EventBufferE": 4200000,
+      "_ZN6ledger8FastBook6cancelEjmRNS_11EventBufferE": 1263272,
+      "_ZN6ledger13ReferenceBook7processERKNS_7CommandERNS_11EventBufferE": 2100000
+    },
+    "core_profile_diagnostics": [],
+    "untrained_auxiliary_targets": [
+      {
+        "target": "[4/44] Building CXX object CMakeFiles/ledger.dir/src/feed_view.cpp.o",
+        "warnings": [
+          "warning: no profile data available for file \"feed_view.cpp\" [-Wprofile-instr-unprofiled]"
+        ]
+      },
+      {
+        "target": "[5/44] Building CXX object CMakeFiles/ledger.dir/src/study_workloads.cpp.o",
+        "warnings": [
+          "warning: no profile data available for file \"study_workloads.cpp\" [-Wprofile-instr-unprofiled]"
+        ]
+      },
+      {
+        "target": "[7/44] Building CXX object CMakeFiles/ledger_replay.dir/src/replay.cpp.o",
+        "warnings": [
+          "warning: no profile data available for file \"replay.cpp\" [-Wprofile-instr-unprofiled]"
+        ]
+      },
+      {
+        "target": "[8/44] Building CXX object CMakeFiles/ledger_generate.dir/bench/gen_orders.cpp.o",
+        "warnings": [
+          "warning: profile data may be out of date: of 617 functions, 1 has mismatched data that will be ignored [-Wprofile-instr-out-of-date]"
+        ]
+      },
+      {
+        "target": "[10/44] Building CXX object CMakeFiles/ledger_spsc_bench.dir/bench/bench_spsc.cpp.o",
+        "warnings": [
+          "warning: profile data may be out of date: of 406 functions, 1 has mismatched data that will be ignored [-Wprofile-instr-out-of-date]"
+        ]
+      },
+      {
+        "target": "[11/44] Building CXX object CMakeFiles/ledger_market_maker.dir/src/market_maker.cpp.o",
+        "warnings": [
+          "warning: profile data may be out of date: of 185 functions, 1 has mismatched data that will be ignored [-Wprofile-instr-out-of-date]"
+        ]
+      },
+      {
+        "target": "[12/44] Building CXX object CMakeFiles/ledger_risk_demo.dir/examples/risk_demo.cpp.o",
+        "warnings": [
+          "warning: no profile data available for file \"risk_demo.cpp\" [-Wprofile-instr-unprofiled]"
+        ]
+      },
+      {
+        "target": "[13/44] Building CXX object CMakeFiles/ledger_tests.dir/tests/unit/engine_tests.cpp.o",
+        "warnings": [
+          "warning: no profile data available for file \"engine_tests.cpp\" [-Wprofile-instr-unprofiled]"
+        ]
+      },
+      {
+        "target": "[14/44] Building CXX object CMakeFiles/ledger_study.dir/bench/bench_study.cpp.o",
+        "warnings": [
+          "warning: no profile data available for file \"bench_study.cpp\" [-Wprofile-instr-unprofiled]"
+        ]
+      },
+      {
+        "target": "[15/44] Building CXX object CMakeFiles/ledger_allocation_tests.dir/tests/unit/memory_tests.cpp.o",
+        "warnings": [
+          "warning: no profile data available for file \"memory_tests.cpp\" [-Wprofile-instr-unprofiled]"
+        ]
+      },
+      {
+        "target": "[16/44] Building CXX object CMakeFiles/ledger_spsc_tests.dir/tests/unit/spsc_tests.cpp.o",
+        "warnings": [
+          "warning: no profile data available for file \"spsc_tests.cpp\" [-Wprofile-instr-unprofiled]"
+        ]
+      },
+      {
+        "target": "[17/44] Building CXX object CMakeFiles/ledger_feed_tests.dir/tests/unit/feed_tests.cpp.o",
+        "warnings": [
+          "warning: no profile data available for file \"feed_tests.cpp\" [-Wprofile-instr-unprofiled]"
+        ]
+      },
+      {
+        "target": "[18/44] Building CXX object CMakeFiles/ledger_differential.dir/tests/differential/differential.cpp.o",
+        "warnings": [
+          "warning: profile data may be out of date: of 360 functions, 1 has mismatched data that will be ignored [-Wprofile-instr-out-of-date]"
+        ]
+      },
+      {
+        "target": "[19/44] Building CXX object CMakeFiles/ledger_pool_tests.dir/tests/unit/pool_tests.cpp.o",
+        "warnings": [
+          "warning: no profile data available for file \"pool_tests.cpp\" [-Wprofile-instr-unprofiled]"
+        ]
+      },
+      {
+        "target": "[20/44] Building CXX object CMakeFiles/ledger_feed_view_tests.dir/tests/unit/feed_view_tests.cpp.o",
+        "warnings": [
+          "warning: no profile data available for file \"feed_view_tests.cpp\" [-Wprofile-instr-unprofiled]"
+        ]
+      },
+      {
+        "target": "[21/44] Building CXX object CMakeFiles/ledger_risk_tests.dir/tests/unit/risk_tests.cpp.o",
+        "warnings": [
+          "warning: no profile data available for file \"risk_tests.cpp\" [-Wprofile-instr-unprofiled]"
+        ]
+      },
+      {
+        "target": "[22/44] Building CXX object CMakeFiles/ledger_index_tests.dir/tests/unit/index_tests.cpp.o",
+        "warnings": [
+          "warning: no profile data available for file \"index_tests.cpp\" [-Wprofile-instr-unprofiled]"
+        ]
+      },
+      {
+        "target": "[23/44] Building CXX object CMakeFiles/ledger_fok_tests.dir/tests/unit/fok_tests.cpp.o",
+        "warnings": [
+          "warning: no profile data available for file \"fok_tests.cpp\" [-Wprofile-instr-unprofiled]"
+        ]
+      },
+      {
+        "target": "[24/44] Building CXX object CMakeFiles/ledger_study_observer_tests.dir/tests/unit/study_observer_tests.cpp.o",
+        "warnings": [
+          "warning: no profile data available for file \"study_observer_tests.cpp\" [-Wprofile-instr-unprofiled]"
+        ]
+      },
+      {
+        "target": "[25/44] Building CXX object CMakeFiles/ledger_study_workload_tests.dir/tests/unit/study_workload_tests.cpp.o",
+        "warnings": [
+          "warning: no profile data available for file \"study_workload_tests.cpp\" [-Wprofile-instr-unprofiled]"
+        ]
+      }
+    ],
+    "note": "Training replays ledger_bench; auxiliary executables/tests are intentionally untrained. No missing/outdated profile diagnostic for book.cpp, reference_book.cpp, feed.cpp, or bench_replay.cpp. Linker-only -fuse-ld=lld warnings at compile steps are expected.",
+    "profile_used": true
+  },
+  "automated_profile_verification": {
+    "correctness": true,
+    "reason": "Core profile artifacts are present and the compiler reported no missing or stale core data",
+    "profile_hashes": {
+      "profile/merged.profdata": "42d1e9339a66ff4bd7ea474e62818d8b6f9f6a37d6f5330aa3691ecaef7c6f07"
+    },
+    "counts": {
+      "FastBook::process": 4200000,
+      "ReferenceBook::process": 2100000
+    },
+    "diagnostics": [
+      {
+        "source": "feed_view.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "warning: no profile data available for file \"feed_view.cpp\" [-Wprofile-instr-unprofiled]"
+      },
+      {
+        "source": "study_workloads.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "warning: no profile data available for file \"study_workloads.cpp\" [-Wprofile-instr-unprofiled]"
+      },
+      {
+        "source": "replay.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "warning: no profile data available for file \"replay.cpp\" [-Wprofile-instr-unprofiled]"
+      },
+      {
+        "source": "gen_orders.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "warning: profile data may be out of date: of 617 functions, 1 has mismatched data that will be ignored [-Wprofile-instr-out-of-date]"
+      },
+      {
+        "source": "bench_spsc.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "warning: profile data may be out of date: of 406 functions, 1 has mismatched data that will be ignored [-Wprofile-instr-out-of-date]"
+      },
+      {
+        "source": "market_maker.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "warning: profile data may be out of date: of 185 functions, 1 has mismatched data that will be ignored [-Wprofile-instr-out-of-date]"
+      },
+      {
+        "source": "risk_demo.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "warning: no profile data available for file \"risk_demo.cpp\" [-Wprofile-instr-unprofiled]"
+      },
+      {
+        "source": "engine_tests.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "warning: no profile data available for file \"engine_tests.cpp\" [-Wprofile-instr-unprofiled]"
+      },
+      {
+        "source": "bench_study.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "warning: no profile data available for file \"bench_study.cpp\" [-Wprofile-instr-unprofiled]"
+      },
+      {
+        "source": "memory_tests.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "warning: no profile data available for file \"memory_tests.cpp\" [-Wprofile-instr-unprofiled]"
+      },
+      {
+        "source": "spsc_tests.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "warning: no profile data available for file \"spsc_tests.cpp\" [-Wprofile-instr-unprofiled]"
+      },
+      {
+        "source": "feed_tests.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "warning: no profile data available for file \"feed_tests.cpp\" [-Wprofile-instr-unprofiled]"
+      },
+      {
+        "source": "differential.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "warning: profile data may be out of date: of 360 functions, 1 has mismatched data that will be ignored [-Wprofile-instr-out-of-date]"
+      },
+      {
+        "source": "pool_tests.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "warning: no profile data available for file \"pool_tests.cpp\" [-Wprofile-instr-unprofiled]"
+      },
+      {
+        "source": "feed_view_tests.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "warning: no profile data available for file \"feed_view_tests.cpp\" [-Wprofile-instr-unprofiled]"
+      },
+      {
+        "source": "risk_tests.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "warning: no profile data available for file \"risk_tests.cpp\" [-Wprofile-instr-unprofiled]"
+      },
+      {
+        "source": "index_tests.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "warning: no profile data available for file \"index_tests.cpp\" [-Wprofile-instr-unprofiled]"
+      },
+      {
+        "source": "fok_tests.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "warning: no profile data available for file \"fok_tests.cpp\" [-Wprofile-instr-unprofiled]"
+      },
+      {
+        "source": "study_observer_tests.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "warning: no profile data available for file \"study_observer_tests.cpp\" [-Wprofile-instr-unprofiled]"
+      },
+      {
+        "source": "study_workload_tests.cpp",
+        "core": false,
+        "unassigned": false,
+        "message": "warning: no profile data available for file \"study_workload_tests.cpp\" [-Wprofile-instr-unprofiled]"
+      }
+    ]
+  }
+}

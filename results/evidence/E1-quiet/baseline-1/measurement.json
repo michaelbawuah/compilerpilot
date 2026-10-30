@@ -1,0 +1,105 @@
+{
+  "correctness": true,
+  "throughput": 18054890.6591,
+  "p50_ns": 41.0,
+  "p99_ns": 271.0,
+  "cv": 0.0541948293808832,
+  "spread": 958179.6876114937,
+  "runs": [
+    16110562.7971,
+    18158661.2665,
+    17499011.5246,
+    18578267.2581,
+    18054890.6591
+  ],
+  "error": null,
+  "provenance": {
+    "input_sha256": "287e9fc40655dc798a55b518f510c6f5528bfad862853869227c80036fa5e05e",
+    "input": "/workspace/scratch/782b5db88681/compilerpilot/data/eval.lob",
+    "cpu": 0,
+    "pinned": true,
+    "flags": [
+      "-O3",
+      "-DNDEBUG",
+      "-march=native",
+      "-fopt-info-missed"
+    ],
+    "summary": "/workspace/scratch/782b5db88681/compilerpilot/builds/E1-quiet/be180963747c4559/baseline-1/summary.json",
+    "runs_csv": "/workspace/scratch/782b5db88681/compilerpilot/builds/E1-quiet/be180963747c4559/baseline-1/runs.csv",
+    "benchmark_command": [
+      "taskset",
+      "-c",
+      "0",
+      "/workspace/scratch/782b5db88681/compilerpilot/builds/E1-quiet/be180963747c4559/ledger_bench",
+      "--input",
+      "/workspace/scratch/782b5db88681/compilerpilot/data/eval.lob",
+      "--runs",
+      "5",
+      "--warmup",
+      "50000",
+      "--outdir",
+      "/workspace/scratch/782b5db88681/compilerpilot/builds/E1-quiet/be180963747c4559/baseline-1"
+    ],
+    "differential_command": [
+      "taskset",
+      "-c",
+      "0",
+      "/workspace/scratch/782b5db88681/compilerpilot/builds/E1-quiet/be180963747c4559/ledger_differential",
+      "--seeds",
+      "5",
+      "--orders",
+      "100000",
+      "--output",
+      "/workspace/scratch/782b5db88681/compilerpilot/builds/E1-quiet/be180963747c4559/baseline-1/differential.json"
+    ],
+    "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+    "compiler": {
+      "version": "13.3.0",
+      "flags": "-O3 -DNDEBUG -march=native -fopt-info-missed -DNDEBUG   standard=C++23",
+      "optimization_enabled": true,
+      "ndebug": true
+    },
+    "differential": {
+      "status": "pass",
+      "generator": "splitmix64-bounded-adversarial-v1",
+      "base_seed": 8330235730275514375,
+      "first_seed": 0,
+      "seeds": 5,
+      "commands_per_seed": 100000,
+      "commands_compared": 500000,
+      "reports_compared": 1047284,
+      "trades_compared": 171010,
+      "applied_commands": 237011,
+      "rejected_commands": 262989,
+      "structural_checkpoints": 125,
+      "checkpoint_interval": 4096,
+      "linear_variant_compared": true,
+      "linear_fok_variant_compared": true,
+      "per_command_checks": [
+        "process_result",
+        "all_event_fields",
+        "statistics",
+        "size",
+        "resting_quantity",
+        "best_quotes",
+        "quantity_conservation",
+        "uncrossed_quotes"
+      ],
+      "checkpoint_checks": [
+        "full_structural_invariants",
+        "full_FIFO_orders",
+        "all_levels",
+        "all_statistics"
+      ],
+      "elapsed_seconds": 0.105922
+    }
+  },
+  "checksums": {
+    "event_checksum": 741329192224569279,
+    "trade_checksum": 7031300757833197514,
+    "events": 2191466,
+    "trades": 397155,
+    "rejected_commands": 0,
+    "live_orders_final": 2045
+  }
+}

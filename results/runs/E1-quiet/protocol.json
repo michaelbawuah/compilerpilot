@@ -1,0 +1,22 @@
+{
+  "strategy": "baseline",
+  "seed": 0,
+  "budget": 1,
+  "arguments": {
+    "command": "baseline",
+    "ledger": "/workspace/scratch/782b5db88681/compilerpilot/ledger",
+    "data": "/workspace/scratch/782b5db88681/compilerpilot/data",
+    "results": "/workspace/scratch/782b5db88681/compilerpilot/results",
+    "commands": 1000000,
+    "evaluation_seed": 20261011,
+    "training_seed": 20261012,
+    "cpu": 0,
+    "jobs": 2,
+    "baseline_repetitions": 10,
+    "run_id": "E1-quiet"
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "temperature": null,
+  "model": null,
+  "provider": null
+}

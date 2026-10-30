@@ -1,0 +1,103 @@
+{
+  "build": {
+    "build_id": "19f4d9a83f510de9",
+    "candidate": {
+      "compiler": "clang",
+      "opt": "O3",
+      "isa": "native",
+      "lto": true,
+      "pgo": true,
+      "inline": "default",
+      "unroll": false,
+      "vectorize": true,
+      "frame_pointer": false,
+      "alignment": 0,
+      "semantic_interposition": true
+    },
+    "build_dir": "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/19f4d9a83f510de9",
+    "success": false,
+    "compile_s": 22.615828787999817,
+    "text_bytes": null,
+    "compiler_version": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+    "error": "[1/44] Building CXX object CMakeFiles/ledger.dir/src/book.cpp.o\nclang++: warning: argument unused during compilation: '-fuse-ld=lld' [-Wunused-command-line-argument]\n[2/44] Building CXX object CMakeFiles/ledger.dir/src/reference_book.cpp.o\nclang++: warning: argument unused during compilation: '-fuse-ld=lld' [-Wunused-command-line-argument]\n[3/44] Building CXX object CMakeFiles/ledger.dir/src/feed_view.cpp.o\nclang++: warning: argument unused during compilation: '-fuse-ld=lld' [-Wunused-command-line-argument]\nwarning: no profile data available for file \"feed_view.cpp\" [-Wprofile-instr-unprofiled]\n1 warning generated.\n[4/44] Building CXX object CMakeFiles/ledger.dir/src/feed.cpp.o\nclang++: warning: argument unused during compilation: '-fuse-ld=lld' [-Wunused-command-line-argument]\n[5/44] Building CXX object CMakeFiles/ledger.dir/src/study_workloads.cpp.o\nclang++: warning: argument unused during compilation: '-fuse-ld=lld' [-Wunused-command-line-argument]\nwarning: no profile data available for file \"study_workloads.cpp\" [-Wprofile-instr-unprofiled]\n1 warning generated.\n[6/44] Linking CXX static library libledger.a\n[7/44] Building CXX object CMakeFiles/ledger_replay.dir/src/replay.cpp.o\nclang++: warning: argument unused during compilation: '-fuse-ld=lld' [-Wunused-command-line-argument]\nwarning: no profile data available for file \"replay.cpp\" [-Wprofile-instr-unprofiled]\n1 warning generated.\n[8/44] Building CXX object CMakeFiles/ledger_generate.dir/bench/gen_orders.cpp.o\nclang++: warning: argument unused during compilation: '-fuse-ld=lld' [-Wunused-command-line-argument]\nwarning: profile data may be out of date: of 617 functions, 1 has mismatched data that will be ignored [-Wprofile-instr-out-of-date]\n1 warning generated.\n[9/44] Building CXX object CMakeFiles/ledger_bench.dir/bench/bench_replay.cpp.o\nclang++: warning: argument unused during compilation: '-fuse-ld=lld' [-Wunused-command-line-argument]\n[10/44] Building CXX object CMakeFiles/ledger_spsc_bench.dir/bench/bench_spsc.cpp.o\nFAILED: [code=135] CMakeFiles/ledger_spsc_bench.dir/bench/bench_spsc.cpp.o \n/root/.local/bin/clang++  -I/workspace/scratch/782b5db88681/compilerpilot/ledger/include -O3 -DNDEBUG -march=native -flto=thin -fuse-ld=lld -fprofile-instr-use=/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/19f4d9a83f510de9/profile/merged.profdata -fsave-optimization-record -DNDEBUG -std=c++23 -Wall -Wextra -Wpedantic -MD -MT CMakeFiles/ledger_spsc_bench.dir/bench/bench_spsc.cpp.o -MF CMakeFiles/ledger_spsc_bench.dir/bench/bench_spsc.cpp.o.d -o CMakeFiles/ledger_spsc_bench.dir/bench/bench_spsc.cpp.o -c /workspace/scratch/782b5db88681/compilerpilot/ledger/bench/bench_spsc.cpp\nBus error\n[11/44] Building CXX object CMakeFiles/ledger_study.dir/bench/bench_study.cpp.o\nclang++: warning: argument unused during compilation: '-fuse-ld=lld' [-Wunused-command-line-argument]\nwarning: no profile data available for file \"bench_study.cpp\" [-Wprofile-instr-unprofiled]\n1 warning generated.\nninja: build stopped: subcommand failed.\n",
+    "flags": [
+      "-O3",
+      "-DNDEBUG",
+      "-march=native",
+      "-flto=thin",
+      "-fuse-ld=lld",
+      "-fprofile-instr-use=/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/19f4d9a83f510de9/profile/merged.profdata",
+      "-fsave-optimization-record"
+    ],
+    "provenance": {
+      "ledger_commit": "c0dbffd6a036feb27e225362a92df9792d8e844a",
+      "ledger_dirty": false,
+      "source_sha256": "d46a4c63609ef2b9955d90d1260133a4f1a48815eb836229d6dc07bfb25df45e",
+      "compiler_executable": "/root/.local/bin/clang++",
+      "configure_s": 1.1851280539997333,
+      "commands": [
+        [
+          "cmake",
+          "-S",
+          "/workspace/scratch/782b5db88681/compilerpilot/ledger",
+          "-B",
+          "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/19f4d9a83f510de9",
+          "-DCMAKE_BUILD_TYPE=Release",
+          "-DCMAKE_CXX_COMPILER=clang++",
+          "-DCMAKE_CXX_FLAGS=-O3 -DNDEBUG -march=native -flto=thin -fuse-ld=lld -fprofile-instr-generate=/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/19f4d9a83f510de9/profile/default-%p.profraw -fsave-optimization-record",
+          "-DCMAKE_CXX_FLAGS_RELEASE=-DNDEBUG",
+          "-DLEDGER_NATIVE=OFF",
+          "-DBUILD_TESTING=ON",
+          "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+          "-G",
+          "Ninja"
+        ],
+        [
+          "cmake",
+          "--build",
+          "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/19f4d9a83f510de9",
+          "--parallel",
+          "2",
+          "--target",
+          "ledger_bench"
+        ],
+        [
+          "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/19f4d9a83f510de9/ledger_bench",
+          "--input",
+          "/workspace/scratch/782b5db88681/compilerpilot/data/train.lob",
+          "--runs",
+          "1",
+          "--outdir",
+          "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/19f4d9a83f510de9/training"
+        ],
+        [
+          "cmake",
+          "-S",
+          "/workspace/scratch/782b5db88681/compilerpilot/ledger",
+          "-B",
+          "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/19f4d9a83f510de9",
+          "-DCMAKE_BUILD_TYPE=Release",
+          "-DCMAKE_CXX_COMPILER=clang++",
+          "-DCMAKE_CXX_FLAGS=-O3 -DNDEBUG -march=native -flto=thin -fuse-ld=lld -fprofile-instr-use=/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/19f4d9a83f510de9/profile/merged.profdata -fsave-optimization-record",
+          "-DCMAKE_CXX_FLAGS_RELEASE=-DNDEBUG",
+          "-DLEDGER_NATIVE=OFF",
+          "-DBUILD_TESTING=ON",
+          "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+          "-G",
+          "Ninja"
+        ],
+        [
+          "cmake",
+          "--build",
+          "/workspace/scratch/782b5db88681/compilerpilot/builds/qualification/19f4d9a83f510de9",
+          "--parallel",
+          "2"
+        ]
+      ],
+      "clean_build": true,
+      "training_input_sha256": "eb96b4bb8c54896f536506107870501473ec815c4777594f9dd78c45ae33517e",
+      "training_input": "/workspace/scratch/782b5db88681/compilerpilot/data/train.lob"
+    }
+  },
+  "metric": null
+}
